@@ -18,6 +18,8 @@ class BodyCounter extends Component {
     const { addition } = this.state;
     addition ? this.addCount() : this.awayCount();
   }
+  
+  
   render() {
     const { step } = this.props;
     const { count, addition } = this.state;
@@ -28,6 +30,7 @@ class BodyCounter extends Component {
         <h2>step:{step}</h2>
         <button onClick={this.calc}>{addition ? '+' : '-'}</button>
         <button onClick={this.changeOperation}>change</button>
+        <button onClick={this.autoClick}>autoClick</button>
       </section>
     )
   }
